@@ -663,15 +663,16 @@ body.light-mode .project-description{
     }
 
     .profile-header {
-        position:fixed;
-        top:16px;
-        left:12px;
-        right:12px;
+        position:relative;
+        top:auto;
+        left:auto;
+        right:auto;
         display:flex;
         flex-wrap:wrap;
         align-items:center;
         gap:12px;
-        padding-right:12px;
+        margin-bottom:12px;
+        padding:0;
     }
 
     .profile-image {
@@ -696,8 +697,16 @@ body.light-mode .project-description{
     }
 
     .profile-divider {
-        left:12px;
-        right:12px;
+        position:relative;
+        top:auto;
+        left:auto;
+        right:auto;
+        margin:0 0 16px;
+    }
+
+    .body-summary {
+        max-width:860px;
+        margin:0 auto 0;
     }
 
     .body-summary,

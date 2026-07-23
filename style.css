@@ -680,10 +680,14 @@ body.light-mode .project-description{
 
 @media (max-width: 768px) {
     .page-shell {
-        margin:20px auto 30px;
-        width:calc(100% - 20px);
+        margin:16px auto 24px;
+        width:calc(100% - 24px);
         max-width:none;
         box-sizing:border-box;
+        padding:16px;
+        border-radius:16px;
+        border:1px solid rgba(35,75,145,0.08);
+        box-shadow:0 18px 40px rgba(10,35,75,0.22), 0 0 0 1px rgba(35,75,145,0.06);
     }
 
     .profile-header {

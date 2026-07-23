@@ -16,11 +16,12 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     }
 
-    // Initialize smooth details dropdowns for coursework
+    // Initialize smooth details dropdowns for coursework (works on touch devices)
     (function setupCourseworkDropdowns(){
         document.querySelectorAll('details.education-coursework-dropdown').forEach(dropdown => {
             const content = dropdown.querySelector('.education-coursework');
-            if (!content) return;
+            const summary = dropdown.querySelector('summary');
+            if (!content || !summary) return;
             const updateHeight = () => {
                 if (dropdown.open) {
                     content.style.maxHeight = content.scrollHeight + 'px';
@@ -29,6 +30,10 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
             };
             dropdown.addEventListener('toggle', updateHeight);
+            // ensure taps and keyboard activate the animated height update
+            summary.addEventListener('click', () => setTimeout(updateHeight, 0));
+            summary.addEventListener('pointerup', () => setTimeout(updateHeight, 0));
+            summary.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') setTimeout(updateHeight, 0); });
             // initialize on load
             updateHeight();
         });
@@ -72,15 +77,27 @@ document.addEventListener('DOMContentLoaded', function(){
         projectRange.addEventListener('wheel', adjustRangeByWheel, { passive: false });
 
         document.querySelectorAll('.project-card').forEach((card) => {
-            card.addEventListener('click', () => {
+            let pointerToggled = false;
+            const toggleCard = () => {
                 card.classList.toggle('flipped');
                 const pressed = card.classList.contains('flipped');
                 card.setAttribute('aria-pressed', String(pressed));
-            });
+            };
+            const onPointerUp = (e) => {
+                pointerToggled = true;
+                toggleCard();
+                setTimeout(() => { pointerToggled = false; }, 500);
+            };
+            const onClick = (e) => {
+                if (pointerToggled) return;
+                toggleCard();
+            };
+            card.addEventListener('pointerup', onPointerUp);
+            card.addEventListener('click', onClick);
             card.addEventListener('keydown', (event) => {
                 if (event.key === 'Enter' || event.key === ' ') {
                     event.preventDefault();
-                    card.click();
+                    toggleCard();
                 }
             });
         });

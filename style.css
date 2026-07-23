@@ -1,6 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -680,9 +680,10 @@ body.light-mode .project-description{
 
 @media (max-width: 768px) {
     .page-shell {
-        margin:20px 0 30px;
-        width:100%;
+        margin:20px auto 30px;
+        width:calc(100% - 20px);
         max-width:none;
+        box-sizing:border-box;
     }
 
     .profile-header {

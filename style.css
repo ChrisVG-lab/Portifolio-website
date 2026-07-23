@@ -663,12 +663,12 @@ body.light-mode .project-description{
     }
 
     .profile-header {
-        position:obsolute;
+       
         left:12px;
     }
 
     .profile-divider {
-        position:obsolute;
+        
         left:12px;
         right:12px;
     }

@@ -674,8 +674,9 @@ body.light-mode .project-description{
 
 @media (max-width: 768px) {
     .page-shell {
-        margin:20px 12px 30px;
-        max-width:calc(100% - 24px);
+        margin:20px 0 30px;
+        width:100%;
+        max-width:none;
     }
 
     .profile-header {

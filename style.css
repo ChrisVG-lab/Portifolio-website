@@ -144,4 +144,324 @@ body.light-mode .page-shell{
 body.light-mode .profile-divider{
     background-color:#bbbbbb;
 }
+
+.body-summary{
+    max-width:860px;
+    margin:200px auto 0;
+    color:#d3d3d3;
+    font-size:18px;
+    line-height:1.8;
+    text-align:center;
+    letter-spacing:0.4px;
+    padding:0 18px;
+}
+
+body.light-mode .body-summary{
+    color:#333333;
+}
+
+.section-heading{
+    margin:32px auto 16px;
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:4px;
+    color:#d3d3d3;
+    text-transform:uppercase;
+}
+
+body.light-mode .section-heading{
+    color:#333333;
+}
+.heading-divider{
+    width:100%;
+    max-width:760px;
+    height:1px;
+    margin:34px auto 0;
+    background-image: linear-gradient(90deg, rgba(4,33,74,0.95) 0%, rgba(180,35,55,0.95) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+}
+.summary-divider{
+    width:100%;
+    max-width:760px;
+    height:1px;
+    margin:34px auto 0;
+    background-image: linear-gradient(90deg, rgba(4,33,74,0.95) 0%, rgba(180,35,55,0.95) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+}
+
+.page-footer{
+    margin-top:260px;
+    padding-top:40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:24px;
+}
+
+.footer-divider{
+    width:100%;
+    max-width:1040px;
+    height:1px;
+    background-image: linear-gradient(90deg, rgba(4,33,74,0.95) 0%, rgba(180,35,55,0.95) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+}
+
+.footer-content{
+    width:100%;
+    max-width:1040px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.footer-contact{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    color:#d3d3d3;
+    font-size:18px;
+    font-weight:600;
+    text-align:left;
+}
+
+.footer-contact div{
+    line-height:1.6;
+}
+
+.footer-social{
+    display:flex;
+    gap:12px;
+}
+
+.social-button{
+    width:56px;
+    height:56px;
+    padding:10px;
+    border:none;
+    border-radius:14px;
+    background:rgba(255,255,255,0.08);
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:background-color 0.2s ease;
+}
+
+.social-button:hover{
+    background-color:#0b274f;
+}
+
+.social-button img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+body.light-mode .footer-contact{
+    color:#444444;
+}
+
+body.light-mode .social-button{
+    background:rgba(0,0,0,0.05);
+}
+
+.projects-slider{
+    width:100%;
+    max-width:1040px;
+    margin:16px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.projects-slider-window{
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    background:rgba(20,20,30,0.95);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+    padding:24px 24px 16px;
+}
+
+.projects-slider-track{
+    display:flex;
+    gap:16px;
+    transition:transform 0.35s ease;
+}
+
+.project-slide{
+    flex:0 0 340px;
+    box-sizing:border-box;
+}
+
+.project-card{
+    position:relative;
+    min-height:380px;
+    perspective:1200px;
+    cursor:pointer;
+}
+
+.project-card-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    min-height:380px;
+    transform-style:preserve-3d;
+    transition:transform 0.7s ease;
+}
+
+.project-card.flipped .project-card-inner{
+    transform:rotateY(180deg);
+}
+
+.project-card-front,
+.project-card-back{
+    position:absolute;
+    inset:0;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+    padding:18px;
+    background:rgba(15,15,25,0.95);
+    color:#d3d3d3;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    backface-visibility:hidden;
+}
+
+.project-card-back{
+    transform:rotateY(180deg);
+    background:rgba(20,20,35,0.95);
+    justify-content:flex-start;
+    padding-top:22px;
+}
+
+.project-card-title{
+    font-size:20px;
+    font-weight:800;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#ffffff;
+}
+
+.project-card-back-title{
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#ffffff;
+}
+
+.project-card-back-text{
+    font-size:16px;
+    line-height:1.7;
+    color:#d3d3d3;
+    text-align:center;
+}
+
+.project-back-note{
+    margin:0 0 12px 0;
+    font-size:14px;
+    color:#cfcfcf;
+    font-weight:600;
+    background:rgba(255,255,255,0.02);
+    padding:8px 12px;
+    border-radius:10px;
+}
+
+.project-back-summary{
+    font-size:15px;
+    color:#e6e6e6;
+    line-height:1.6;
+    text-align:center;
+    padding:6px 10px;
+}
+
+.project-description{
+    width:100%;
+    min-height:140px;
+    resize:none;
+    border:none;
+    border-radius:14px;
+    background:rgba(255,255,255,0.05);
+    color:#d3d3d3;
+    padding:16px;
+    font-size:16px;
+    line-height:1.6;
+    outline:none;
+}
+
+.project-description::placeholder{
+    color:rgba(211,211,211,0.6);
+}
+
+.slider-control{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    margin-top:18px;
+    padding-top:12px;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.project-range{
+    width:100%;
+    max-width:920px;
+    accent-color:#4f80ff;
+    appearance:none;
+    height:12px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.16);
+}
+
+.project-range::-webkit-slider-thumb {
+    appearance:none;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#4f80ff;
+    border:2px solid #ffffff;
+    cursor:pointer;
+    box-shadow:0 0 0 4px rgba(79,128,255,0.2);
+}
+
+.project-range::-moz-range-thumb {
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#4f80ff;
+    border:2px solid #ffffff;
+    cursor:pointer;
+    box-shadow:0 0 0 4px rgba(79,128,255,0.2);
+}
+
+.slider-labels{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    max-width:640px;
+    font-size:14px;
+    color:#a0a0a0;
+}
+
+body.light-mode .projects-slider-window,
+body.light-mode .project-card{
+    background:#fafafa;
+}
+
+body.light-mode .project-card{
+    color:#111111;
+}
+
+body.light-mode .project-description{
+    background:#ffffff;
+    color:#111111;
+}
    

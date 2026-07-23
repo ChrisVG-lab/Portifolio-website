@@ -181,6 +181,15 @@ body.light-mode .section-heading{
     background-repeat: no-repeat;
     background-size: 100% 1px;
 }
+.heading-divider-top{
+    width:100%;
+    max-width:760px;
+    height:1px;
+    margin:14px auto 6px;
+    background-image: linear-gradient(90deg, rgba(4,33,74,0.95) 0%, rgba(180,35,55,0.95) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+}
 .summary-divider{
     width:100%;
     max-width:760px;
@@ -189,6 +198,44 @@ body.light-mode .section-heading{
     background-image: linear-gradient(90deg, rgba(4,33,74,0.95) 0%, rgba(180,35,55,0.95) 100%);
     background-repeat: no-repeat;
     background-size: 100% 1px;
+}
+
+.download-resume-section{
+    width:100%;
+    max-width:1040px;
+    margin:20px auto 0;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#d3d3d3;
+}
+
+.download-resume-button{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 18px;
+    border-radius:14px;
+    background:rgba(79,128,255,0.18);
+    color:#ffffff;
+    text-decoration:none;
+    border:1px solid rgba(79,128,255,0.35);
+    transition:transform 0.2s ease, background-color 0.2s ease;
+}
+
+.download-resume-button:hover,
+.download-resume-button:focus{
+    background:rgba(79,128,255,0.28);
+    transform:translateY(-1px);
+}
+
+.download-resume-button svg{
+    display:block;
 }
 
 .page-footer{
@@ -266,6 +313,33 @@ body.light-mode .footer-contact{
 
 body.light-mode .social-button{
     background:rgba(0,0,0,0.05);
+}
+
+.heading-section-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+    margin:20px 0 12px;
+}
+
+.section-link{
+    color:#d3d3d3;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+    padding:8px 14px;
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:14px;
+    transition:background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.section-link:hover,
+.section-link:focus{
+    background:rgba(79,128,255,0.14);
+    color:#ffffff;
+    transform:translateY(-1px);
 }
 
 .projects-slider{
@@ -463,5 +537,38 @@ body.light-mode .project-card{
 body.light-mode .project-description{
     background:#ffffff;
     color:#111111;
+}
+
+@media (max-width: 768px) {
+    .page-shell {
+        margin:20px 12px 30px;
+        max-width:calc(100% - 24px);
+    }
+
+    .profile-header {
+        left:12px;
+    }
+
+    .profile-divider {
+        left:12px;
+        right:12px;
+    }
+
+    .top-right-button {
+        right:12px;
+    }
+
+    .body-summary,
+    .heading-divider,
+    .summary-divider,
+    .download-resume-section,
+    .footer-content {
+        padding-left:12px;
+        padding-right:12px;
+    }
+
+    .projects-slider-window {
+        padding:20px 16px 14px;
+    }
 }
    

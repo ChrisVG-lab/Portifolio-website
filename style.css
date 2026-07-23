@@ -668,11 +668,12 @@ body.light-mode .project-description{
         left:auto;
         right:auto;
         display:flex;
-        flex-wrap:wrap;
+        flex-direction:column;
         align-items:center;
         gap:12px;
         margin-bottom:12px;
         padding:0;
+        text-align:center;
     }
 
     .profile-image {
@@ -681,19 +682,21 @@ body.light-mode .project-description{
     }
 
     .profile-meta {
-        max-width:calc(100% - 110px);
+        width:100%;
+        max-width:100%;
         gap:10px;
     }
 
     .profile-name {
-        font-size:24px;
+        font-size:20px;
+        line-height:1.1;
         letter-spacing:1px;
     }
 
     .profile-subtitle {
-        font-size:18px;
+        font-size:16px;
         letter-spacing:2px;
-        margin-top:10px;
+        margin-top:8px;
     }
 
     .profile-divider {
@@ -707,6 +710,7 @@ body.light-mode .project-description{
     .body-summary {
         max-width:860px;
         margin:0 auto 0;
+        padding-top:8px;
     }
 
     .body-summary,

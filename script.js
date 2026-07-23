@@ -16,6 +16,24 @@ document.addEventListener('DOMContentLoaded', function(){
         themeButton.setAttribute('aria-label', lightMode ? 'Switch to dark mode' : 'Switch to light mode');
     });
 
+    // Initialize smooth details dropdowns for coursework
+    (function setupCourseworkDropdowns(){
+        document.querySelectorAll('details.education-coursework-dropdown').forEach(dropdown => {
+            const content = dropdown.querySelector('.education-coursework');
+            if (!content) return;
+            const updateHeight = () => {
+                if (dropdown.open) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = '0px';
+                }
+            };
+            dropdown.addEventListener('toggle', updateHeight);
+            // initialize on load
+            updateHeight();
+        });
+    })();
+
     const projectRange = document.querySelector('.project-range');
     const projectTrack = document.querySelector('.projects-slider-track');
 

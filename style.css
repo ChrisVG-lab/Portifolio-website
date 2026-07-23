@@ -181,6 +181,139 @@ body.light-mode .section-heading{
     background-repeat: no-repeat;
     background-size: 100% 1px;
 }
+
+.education-content{
+    width:100%;
+    max-width:760px;
+    margin:16px auto 0;
+    text-align:left;
+    color:#d3d3d3;
+    font-size:15px;
+    line-height:1.8;
+    padding:0 14px;
+}
+
+.education-school,
+.education-degree,
+.education-graduation{
+    margin-bottom:10px;
+}
+
+.education-coursework-dropdown{
+    margin-bottom:14px;
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:14px;
+    background:rgba(255,255,255,0.03);
+    overflow:hidden;
+}
+
+.education-coursework-dropdown summary{
+    list-style:none;
+    padding:14px 16px;
+    font-weight:700;
+    cursor:pointer;
+    color:#ffffff;
+}
+
+.education-coursework-dropdown summary::-webkit-details-marker{
+    display:none;
+}
+
+.education-coursework-dropdown summary:after{
+    content:'+';
+    float:right;
+    font-size:16px;
+    line-height:1;
+    transition:transform 0.2s ease;
+}
+
+.education-coursework-dropdown[open] summary:after{
+    content:'−';
+}
+
+.education-coursework{
+    list-style:disc inside;
+    padding-left:20px;
+    margin:0;
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition:max-height 0.4s ease, opacity 0.25s ease;
+}
+
+.education-coursework-dropdown[open] .education-coursework{
+    opacity:1;
+}
+
+.education-coursework li{
+    margin-bottom:8px;
+}
+
+.education-school{
+    font-weight:700;
+    color:#ffffff;
+}
+
+.education-dates{
+    color:#a0a0a0;
+    font-weight:500;
+}
+
+.education-coursework{
+    list-style:disc inside;
+    padding-left:20px;
+    margin:0;
+}
+
+.education-coursework li{
+    margin-bottom:8px;
+}
+
+.skills-content{
+    width:100%;
+    max-width:760px;
+    margin:16px auto 0;
+    display:grid;
+    grid-template-columns:repeat(3, minmax(180px, 1fr));
+    gap:18px;
+    padding:0 14px;
+    text-align:left;
+}
+
+.skills-block{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+    padding:18px;
+}
+
+.skills-block-title{
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:12px;
+    color:#ffffff;
+}
+
+.skills-list{
+    list-style:disc inside;
+    margin:0;
+    padding:0;
+    color:#d3d3d3;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.skills-list li{
+    margin-bottom:8px;
+}
+
+@media (max-width: 860px) {
+    .skills-content{
+        grid-template-columns:1fr;
+    }
+}
+
 .heading-divider-top{
     width:100%;
     max-width:760px;
